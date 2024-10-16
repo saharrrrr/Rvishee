@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Checkout Page</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .img-fluid {
+            max-width: 20%;
+            height: auto;
+        }
+        #cart-dropdown {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 200px;
+            display: none;
+            padding: 10px;
+        }
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .item-price {
+            font-weight: bold;
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-sm-12 text-right position-relative">
+            <button class="btn btn-primary" id="cart-btn">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </button>
+            <div id="cart-dropdown" class="dropdown-content">
+                <ul id="cart-items" class="list-unstyled"></ul>
+                <button id="checkout-btn" class="btn btn-success mt-2" onclick="goToCheckout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center my-4">Your Orders</h2>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-center p-3">
+                <img src="assets/images/img-3.jpg" alt="Vegetable Sandwich" class="img-fluid" loading="lazy">
+                <h4>Vegetable Sandwich</h4>
+                <p>Time: 15 - 20 Minutes <button class="btn btn-success">4.3 &#9733;</button></p>
+                <span class="item-price">$10</span>
+                <button class="mt-2 btn btn-primary" onclick="addToCart('Vegetable Sandwich', 10)">Order Now</button>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-center p-3">
+                <img src="assets/images/dosa.jpg" alt="Vishee Burger" class="img-fluid" loading="lazy">
+                <h4>Vishee Burger</h4>
+                <p>Time: 50 - 60 Minutes <button class="btn btn-success">3.9 &#9733;</button></p>
+                <span class="item-price">$9</span>
+                <button class="mt-2 btn btn-primary" onclick="addToCart('Vishee Burger', 9)">Order Now</button>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-center p-3">
+                <img src="assets/images/idli.jpg" alt="Beef Steak" class="img-fluid" loading="lazy">
+                <h4>Beef Steak</h4>
+                <p>Time: 10 - 15 Minutes <button class="btn btn-success">5 &#9733;</button></p>
+                <span class="item-price">$14 <del>$20</del></span>
+                <button class="mt-2 btn btn-primary" onclick="addToCart('Beef Steak', 14)">Order Now</button>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-center p-3">
+                <img src="assets/images/img-5.jpg" alt="Raspberry Stuffed French Toast" class="img-fluid" loading="lazy">
+                <h4>Raspberry Stuffed French Toast</h4>
+                <p>Time: 10 - 15 Minutes <button class="btn btn-success">5 &#9733;</button></p>
+                <span class="item-price">$10 <del>$15</del></span>
+                <button class="mt-2 btn btn-primary" onclick="addToCart('Raspberry Stuffed French Toast', 10)">Order Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let cart = [];
+    
+    function addToCart(item, price) {
+        cart.push({ item, price });
+        updateCartCount();
+        updateCartDropdown();
+    }
+
+    function updateCartCount() {
+        document.getElementById('cart-count').innerText = cart.length;
+    }
+
+    function updateCartDropdown() {
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        
+        cart.forEach(cartItem => {
+            const li = document.createElement('li');
+            li.textContent = `${cartItem.item} - $${cartItem.price}`;
+            cartItems.appendChild(li);
+        });
+    }
+
+    document.getElementById('cart-btn').addEventListener('click', function(event) {
+        event.stopPropagation();
+        const cartDropdown = document.getElementById('cart-dropdown');
+        cartDropdown.style.display = cartDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function(event) {
+        const cartDropdown = document.getElementById('cart-dropdown');
+        const cartBtn = document.getElementById('cart-btn');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        if (!cartBtn.contains(event.target) && !checkoutBtn.contains(event.target)) {
+            cartDropdown.style.display = 'none';
+        }
+    });
+
+    function goToCheckout() {
+        window.location.href = 'checkout.html';
+    }
+</script>
+
+<script src="assets/js/checkout.js"></script>
+</body>
+</html>
