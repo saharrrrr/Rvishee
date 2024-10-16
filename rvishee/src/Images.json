@@ -1,0 +1,66 @@
+[
+    {
+        "src": "/images/img-33.jpg",
+        "alt": "Vegetable Sandwich",
+        "name": "Vegetable Sandwich",
+        "time": "15 - 20 Minutes",
+        "rating": "4.3",
+        "price": "10"
+    },
+    {
+        "src": "/images/burger.jpg",
+        "alt": "Burger",
+        "name": "Burger",
+        "time": "30 - 45 Minutes",
+        "rating": "4.5",
+        "price": "10"
+    },
+    {
+        "src": "/images/beef_steak.jpg",
+        "alt": "Beef Steak",
+        "name": "Beef Steak",
+        "time": "10 - 15 Minutes",
+        "rating": "5",
+        "price": "14"
+    },
+    {
+        "src": "/images/raspberry_stuffed_french_toast.jpg",
+        "alt": "Raspberry Stuffed French Toast",
+        "name": "Raspberry Stuffed French Toast",
+        "time": "10 - 15 Minutes",
+        "rating": "5",
+        "price": "10"
+    },
+    {
+        "src": "/images/noodles.jpg",
+        "alt": "Noodles",
+        "name": "Noodles",
+        "time": "25 - 40 Minutes",
+        "rating": "3.5",
+        "price": "12"
+    },
+    {
+        "src": "/images/pizza.jpg",
+        "alt": "Pizza",
+        "name": "Pizza",
+        "time": "30 - 45 Minutes",
+        "rating": "4.5",
+        "price": "10"
+    },
+    {
+        "src": "/images/vishee_burger.jpg",
+        "alt": "Vishee Burger",
+        "name": "Vishee Burger",
+        "time": "50 - 60 Minutes",
+        "rating": "3.9",
+        "price": "9"
+    },
+    {
+        "src": "/images/fish.jpg",
+        "alt": "Fish",
+        "name": "Fish",
+        "time": "30 - 45 Minutes",
+        "rating": "4.4",
+        "price": "9"
+    }
+]
