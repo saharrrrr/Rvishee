@@ -2,6 +2,7 @@ import React from 'react';
 import  './App.css';
 import Navbar from './Navbar';
 import TopBanner from './TopBanner';
+import CounterSection from './CounterSection';
 import images from './Images.json';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <div className="App">
             <Navbar/>
             <TopBanner/>
+            <CounterSection/>
             <section id="explore-food"> 
                 <div className="explore-food wrapper">
                     <div className="container-fluid">
