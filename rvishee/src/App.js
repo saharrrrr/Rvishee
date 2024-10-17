@@ -6,6 +6,7 @@ import CounterSection from './CounterSection';
 import AboutSection from './AboutSection';
 import StorySection from './StorySection';
 import Footer from './Footer';
+import ExploreFood from './ExploreFood';
 import images from './Images.json';
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
             <TopBanner/>
             <CounterSection/>
             <AboutSection/>
+            <StorySection/>
+            <ExploreFood/>
             <Footer/>
             <section id="explore-food"> 
                 <div className="explore-food wrapper">
