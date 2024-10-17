@@ -1,19 +1,29 @@
 import React from 'react';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, isDropdownOpen, toggleCartDropdown, goToCheckout }) => {
     return (
         <div>
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={toggleCartDropdown}>
                 🛒 Cart ({cart.length})
             </button>
-            <div className="dropdown-content">
-                <ul>
-                    {cart.map((item, index) => (
-                        <li key={index}>{item.name} - ${item.price}</li>
-                    ))}
-                </ul>
-                <button className="btn btn-success">Checkout</button>
-            </div>
+            {isDropdownOpen && (
+                <div className="dropdown-content">
+                    <ul>
+                        {cart.length === 0 ? (
+                            <li>Your cart is empty</li>
+                        ) : (
+                            cart.map((item, index) => (
+                                <li key={index}>{item.name} - ${item.price}</li>
+                            ))
+                        )}
+                    </ul>
+                    {cart.length > 0 && (
+                        <button className="btn btn-success" onClick={goToCheckout}>
+                            Checkout
+                        </button>
+                    )}
+                </div>
+            )}
         </div>
     );
 };

@@ -1,4 +1,4 @@
-const foodsData = [
+export const foodsData = [
     {
         id: 1,
         name: "Vegetable Sandwich",
@@ -35,4 +35,3 @@ const foodsData = [
         image: "assets/images/noodles.jpg"
     }
 ];
-export default foodsData;
