@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import TopBanner from './TopBanner';
 import CounterSection from './CounterSection';
 import AboutSection from './AboutSection';
+import StorySection from './StorySection'
 import images from './Images.json';
 
 function App() {
