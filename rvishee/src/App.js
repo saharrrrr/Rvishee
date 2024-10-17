@@ -4,7 +4,8 @@ import Navbar from './Navbar';
 import TopBanner from './TopBanner';
 import CounterSection from './CounterSection';
 import AboutSection from './AboutSection';
-import StorySection from './StorySection'
+import StorySection from './StorySection';
+import Footer from './Footer';
 import images from './Images.json';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <TopBanner/>
             <CounterSection/>
             <AboutSection/>
+            <Footer/>
             <section id="explore-food"> 
                 <div className="explore-food wrapper">
                     <div className="container-fluid">
