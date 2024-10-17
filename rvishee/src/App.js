@@ -3,6 +3,7 @@ import  './App.css';
 import Navbar from './Navbar';
 import TopBanner from './TopBanner';
 import CounterSection from './CounterSection';
+import AboutSection from './AboutSection';
 import images from './Images.json';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
             <Navbar/>
             <TopBanner/>
             <CounterSection/>
+            <AboutSection/>
             <section id="explore-food"> 
                 <div className="explore-food wrapper">
                     <div className="container-fluid">
