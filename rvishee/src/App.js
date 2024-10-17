@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
-import './NavBar';
+import  './App.css';
+import Navbar from './Navbar';
 import images from './Images.json';
 
 function App() {
     return (
         <div className="App">
-            <NavBar/>
+            <Navbar/>
             <section id="explore-food"> 
                 <div className="explore-food wrapper">
                     <div className="container-fluid">
