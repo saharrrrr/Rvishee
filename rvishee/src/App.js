@@ -29,7 +29,7 @@ function App() {
             <Newsletter/>
             <Contact/>
             <Footer/>
-            <section id="explore-food"> 
+            {/* <section id="explore-food"> 
                 <div className="explore-food wrapper">
                     <div className="container-fluid">
                         <div className="row">
@@ -146,7 +146,7 @@ function App() {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 }
