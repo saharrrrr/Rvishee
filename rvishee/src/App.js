@@ -9,6 +9,7 @@ import Footer from './Footer';
 import ExploreFood from './ExploreFood';
 import Testimonial from './Testimonial';
 import FAQs from './Faqs';
+import BookFood from './BookFood';
 import images from './Images.json';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <ExploreFood/>
             <Testimonial/>
             <FAQs/>
+            <BookFood/>
             <Footer/>
             <section id="explore-food"> 
                 <div className="explore-food wrapper">
