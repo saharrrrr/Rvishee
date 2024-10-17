@@ -1,12 +1,14 @@
 import React from 'react';
 import  './App.css';
 import Navbar from './Navbar';
+import TopBanner from './TopBanner';
 import images from './Images.json';
 
 function App() {
     return (
         <div className="App">
             <Navbar/>
+            <TopBanner/>
             <section id="explore-food"> 
                 <div className="explore-food wrapper">
                     <div className="container-fluid">
