@@ -11,6 +11,7 @@ import Testimonial from './Testimonial';
 import FAQs from './Faqs';
 import BookFood from './BookFood';
 import Newsletter from './Newsletter';
+import Contact from './Contact';
 import images from './Images.json';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <FAQs/>
             <BookFood/>
             <Newsletter/>
+            <Contact/>
             <Footer/>
             <section id="explore-food"> 
                 <div className="explore-food wrapper">
