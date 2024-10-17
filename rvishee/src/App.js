@@ -10,6 +10,7 @@ import ExploreFood from './ExploreFood';
 import Testimonial from './Testimonial';
 import FAQs from './Faqs';
 import BookFood from './BookFood';
+import Newsletter from './Newsletter';
 import images from './Images.json';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Testimonial/>
             <FAQs/>
             <BookFood/>
+            <Newsletter/>
             <Footer/>
             <section id="explore-food"> 
                 <div className="explore-food wrapper">
